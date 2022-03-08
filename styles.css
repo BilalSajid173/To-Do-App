@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap');
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    background-color: #FFE4C0;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+h1{
+    font-size: 40px;
+    text-decoration: underline;
+    color: rgb(78, 66, 66);
+}
+
+h2{
+    font-size: 30px;
+    text-decoration: underline;
+    color: rgb(73, 65, 43);
+}
+
+/********************************************Add Task********************************/
+
+.Add-task{
+    padding: 10px 0;
+}
+
+.addtask-input{
+    background-color:  #BFFFF0;
+    outline: 0;
+    border: 0;
+    font-size: 20px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.addtask-btn{
+    background-color: blueviolet;
+    border: 0;
+    border-radius: 25px;
+    padding: 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.addtask-btn:hover{
+    background-color: pink;
+    color: blueviolet;
+}
+
+/*************************************Pending Tasks**********************************************/
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pending-tasks{
+    background-color: #F0FFC2;
+    padding: 5px 30px;
+    border-radius: 25px;
+    -webkit-box-shadow: 0 0 5px 3px rgb(37, 35, 35);
+    -moz-box-shadow: 0 0 5px 3px rgb(41, 37, 37);
+    box-shadow: 0 0 5px 3px rgb(49, 45, 45);
+}
+
+.li-input{
+    outline: 0;
+    border: 0;
+    padding: 8px;
+    font-size: 25px; 
+    margin: 10px;
+    border-radius: 10px;
+    background-color: aqua;
+    -webkit-box-shadow: 0 0 5px 3px rgb(179, 71, 71);
+    -moz-box-shadow: 0 0 5px 3px rgb(156, 60, 60);
+    box-shadow: 0 0 5px 3px rgb(151, 63, 63);
+}
+
+.btn{
+    padding: 12px 20px;
+    margin: 0 5px;
+    background-color: cadetblue;
+    border: 0;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: darkblue;
+    color: white;
+}
+
+
+
+/***********************************completed task************************************/
+
+
+.completed{
+    text-decoration: line-through;
+    background-color: red;
+    color: white;
+}
+
+
+/*******************************************Media Query*********************************/
+
+
+@media (max-width:700px)
+{
+    .pending-tasks{
+        margin: 0 50px;
+    }
+
+    .li-input{
+        width: 80%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .btn{
+        padding: 15px 25px;
+        font-size: 25px;
+    }
+}
