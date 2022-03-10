@@ -194,7 +194,7 @@ h2{
     
     .li-input{
         padding: 6px;
-        width: 70%;
+        width: 80%;
         font-size: 15px;
         margin: 20px 8px;
     }
@@ -204,5 +204,11 @@ h2{
         font-size: 13px;
     }
     
+}
+
+ @media (max-width:300px){
+    .li-input{
+        width: 70%;
+    }
 }
 
