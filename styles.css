@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap');
 
 body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     font-family: 'Ubuntu', sans-serif;
     text-align: center;
     background-color: #FFE4C0;
@@ -30,12 +34,12 @@ h2{
 }
 
 .addtask-input{
-    background-color:  #BFFFF0;
+    background-color: #c5b8a8;
     outline: 0;
     border: 0;
     font-size: 20px;
     padding: 20px;
-    margin: 20px;
+    margin: 20px 0;
     border-radius: 5px;
 }
 
@@ -43,9 +47,12 @@ h2{
     background-color: blueviolet;
     border: 0;
     border-radius: 25px;
+    margin-left: 20px;
     padding: 15px;
     font-size: 25px;
     cursor: pointer;
+    transition: all 0.2s ease-in;
+    box-shadow: 2px 2px 2px rgb(121, 31, 31);
 }
 
 .addtask-btn:hover{
@@ -55,16 +62,21 @@ h2{
 
 /*************************************Pending Tasks**********************************************/
 
-.wrapper{
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
+#List{
+    padding: 0;
 }
 
 .pending-tasks{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-color: #F0FFC2;
     padding: 5px 30px;
     border-radius: 25px;
+    margin: 10px 0;
+    /* width: 350px; */
     -webkit-box-shadow: 0 0 5px 3px rgb(37, 35, 35);
     -moz-box-shadow: 0 0 5px 3px rgb(41, 37, 37);
     box-shadow: 0 0 5px 3px rgb(49, 45, 45);
@@ -91,11 +103,13 @@ h2{
     font-size: 20px;
     border-radius: 20px;
     cursor: pointer;
+    transition: all 0.2s ease-in;
+    box-shadow: 2px 2px 2px rgb(121, 31, 31);
 }
 
 .btn:hover{
-    background-color: darkblue;
-    color: white;
+    background-color: pink;
+    color: blueviolet;
 }
 
 
@@ -105,7 +119,7 @@ h2{
 
 .completed{
     text-decoration: line-through;
-    background-color: red;
+    background-color: rgb(150, 105, 105);
     color: white;
 }
 
@@ -115,18 +129,80 @@ h2{
 
 @media (max-width:700px)
 {
-    .pending-tasks{
-        margin: 0 50px;
+    h1{
+        font-size: 35px;
     }
 
+    .addtask-input{
+        font-size: 17px;
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    .addtask-btn{
+        margin-left: 17px;
+        padding: 12px;
+        font-size: 20px;
+    }
+
+    .pending-tasks{
+        padding: 3px 15px;
+        margin: 10px 30px;
+    }
+    
     .li-input{
+        padding: 6px;
         width: 80%;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        font-size: 20px;
+        margin: 20px 8px;
     }
 
     .btn{
-        padding: 15px 25px;
-        font-size: 25px;
+        padding: 10px 20px;
+        font-size: 20px;
     }
 }
+
+
+@media (max-width:500px)
+{
+
+    h1{
+        font-size: 25px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    .addtask-input{
+        font-size: 13px;
+        padding: 10px;
+        margin: 15px 0;
+    }
+
+    .addtask-btn{
+        margin-left: 13px;
+        padding: 8px;
+        font-size: 15px;
+    }
+
+    .pending-tasks{
+        padding: 3px 10px;
+        margin: 10px 20px;
+    }
+    
+    .li-input{
+        padding: 6px;
+        width: 70%;
+        font-size: 15px;
+        margin: 20px 8px;
+    }
+
+    .btn{
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+    
+}
+
